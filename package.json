@@ -1,0 +1,16 @@
+{
+   "version": "1.0.0",
+   "name": "TypescriptVisualStudioGulpFile",
+   "private": true,
+   "devDependencies": {
+      "gulp": "~3.9.0",
+      "webpack": "~1.12.2",
+      "source-map-loader": "~0.1.5",
+      "gulp-util": "~3.0.6",
+      "browser-sync": "~2.9.10",
+      "tsd": "~0.6.5"
+   },
+   "dependencies": {
+      "jquery": "~2.1.4"
+   }
+}
