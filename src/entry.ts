@@ -1,7 +1,10 @@
-﻿declare var require;
+﻿/// <reference path="../typings/q/q.d.ts" />
+import Q = require("q");
+import ExampleClass from "./example_class";
 
-var $: JQueryStatic = require("jquery");
+var e = new ExampleClass();
+document.writeln("The example class says: " + e.SayHi());
 
-$(document).ready(() => {
-   document.write("HELLO!!!!");
-});
+Q("Hello!")
+   .delay(1500)
+   .then(msg => document.getElementById("content").innerHTML = "And Q says " + msg);

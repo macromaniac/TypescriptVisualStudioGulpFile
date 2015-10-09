@@ -1,4 +1,5 @@
-﻿var gulp = require('gulp');
+﻿/// <binding ProjectOpened='auto-pack-files' />
+var gulp = require('gulp');
 var gutil = require("gulp-util");
 var webpack = require('webpack');
 //We don't use webpack-dev-server because it doesn't work with pre-loaded sourcemaps
@@ -37,8 +38,7 @@ gulp.task('auto-pack-files', function (callback) {
 
    }, function (err, stats) {
       if (err) {
-         throw new gutil.PluginError("webpack", err);
-         callback();
+         gutil.log(new gutil.PluginError("webpack", err));
       }
       gutil.log("[webpack]", stats.toString({
          // output options
